@@ -29,10 +29,10 @@
               <div class="alert alert-success" role="alert" style="text-align:center">您已經成功登出</div>
               </c:if>
 		      
-		      <form action="/" method="post">
+		      <form action="${pageContext.request.contextPath}/" method="post">
 	               <div class="panel panel-default" style="text-align:center">
 	                   <div class="panel-heading">
-	                       <div class="panel-title">會議室預約系統</div>
+	                       <div class="panel-title">MRRS</div>
                        </div>
 		               <div class="panel-body" style="padding-left:10%; padding-right:10%">
 						  <div class="form-group">
