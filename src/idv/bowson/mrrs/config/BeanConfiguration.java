@@ -18,11 +18,9 @@ public class BeanConfiguration {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://"
-                + AppConstants.MYSQL_HOST_NAME
-                + ";user="
-                + AppConstants.MYSQL_USERNAME
-                + ";password="
-                + AppConstants.MYSQL_PASSWORD);
+                + AppConstants.MYSQL_HOST_NAME);
+        dataSource.setUsername(AppConstants.MYSQL_USERNAME);
+        dataSource.setPassword(AppConstants.MYSQL_PASSWORD);
         return dataSource;
     }
 }

@@ -29,7 +29,8 @@
               <div class="alert alert-success" role="alert" style="text-align:center">您已經成功登出</div>
               </c:if>
 		      
-		      <form action="${pageContext.request.contextPath}/" method="post">
+		      <form action="${pageContext.request.contextPath}/" method="POST">
+		      <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 	               <div class="panel panel-default" style="text-align:center">
 	                   <div class="panel-heading">
 	                       <div class="panel-title">MRRS</div>

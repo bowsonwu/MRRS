@@ -1,12 +1,18 @@
 package idv.bowson.mrrs.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
 
     private String username;
     private String password;
-    private boolean enable;
+    private String name;
+    private boolean enabled;
+    private List<Role> roles;
 
     public User() {
+        roles = new ArrayList<Role>();
     }
 
     public User(String username) {
@@ -21,8 +27,8 @@ public class User {
         return password;
     }
 
-    public boolean isEnable() {
-        return enable;
+    public boolean isEnabled() {
+        return enabled;
     }
 
     public void setUsername(String username) {
@@ -33,7 +39,23 @@ public class User {
         this.password = password;
     }
 
-    public void setEnable(boolean enable) {
-        this.enable = enable;
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
